@@ -38,7 +38,7 @@ import java.util.List;
 public class FirstFragment extends Fragment implements VolleyCallback,OnDataPassListener{
 
     private static final String TAG = "FirstFragment";
-    
+
     private RecyclerView recyFirstCategory;
 
     private String responceReceiveType = "";
@@ -80,6 +80,8 @@ public class FirstFragment extends Fragment implements VolleyCallback,OnDataPass
 
         recyMainCategory = view.findViewById(R.id.recyFirstCategory);
         recyMainCategory.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false));
+        //recyMainCategory.scrollToPosition(0);
+
 
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.show();

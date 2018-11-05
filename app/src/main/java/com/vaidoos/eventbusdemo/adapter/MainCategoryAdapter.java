@@ -1,6 +1,7 @@
 package com.vaidoos.eventbusdemo.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -24,6 +25,7 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
 
     private Context context;
     private AllCategoryModel[] allCategoryModels;
+    private int lastCheckedPosition = -1;
     //private List<AllCategoryModel> allCategoryModels;
 
     int selected_position = 0; // You have to set this globally in the Adapter class
@@ -47,7 +49,7 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AllProductAdapterViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AllProductAdapterViewHolder holder, final int position) {
 
         //homeActivity = (HomeActivity) context;
 
@@ -73,10 +75,24 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, allCategoryModel.getPcCategoryID(), Toast.LENGTH_SHORT).show();
-                onDataPassListener.onDataPass(allCategoryModel.getPcCategoryID());
+                row_index= position;
+                notifyDataSetChanged();
             }
         });
+        if(row_index==position){
+            holder.itemView.setBackgroundColor(Color.parseColor("#567845"));
+            holder.textViewProductName.setTextColor(Color.parseColor("#ffffff"));
+
+            Toast.makeText(context, allCategoryModel.getPcCategoryID(), Toast.LENGTH_SHORT).show();
+            onDataPassListener.onDataPass(allCategoryModel.getPcCategoryID());
+            holder.itemView.requestFocus();
+
+        }
+        else
+        {
+            holder.itemView.setBackgroundColor(Color.parseColor("#ffffff"));
+            holder.textViewProductName.setTextColor(Color.parseColor("#000000"));
+        }
 
 
     }
@@ -106,6 +122,18 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
             textViewProductRating = itemView.findViewById(R.id.textViewProductRating);
             textViewProductReviewUsers = itemView.findViewById(R.id.textViewProductReviewUsers);
             textViewProductAvailableCount = itemView.findViewById(R.id.textViewProductAvailableCount);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    lastCheckedPosition = getAdapterPosition();
+                    //because of this blinking problem occurs so
+                    //i have a suggestion to add notifyDataSetChanged();
+                    //   notifyItemRangeChanged(0, list.length);//blink list problem
+                    notifyDataSetChanged();
+
+                }
+            });
 
         }
     }
