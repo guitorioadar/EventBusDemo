@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EventBusDemo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="api">http://www.zamangrp.net/apiXML/api/values</string>
+    <string name="geocode_api_key">AIzaSyDBiZ3zmNx18T-0-lMOJ__UTo-FN1aSLr0</string>
+    <string name="geocode_api">https://maps.googleapis.com/maps/api/geocode/</string>
+
+    <string name="preference_file_key">com.crowncomptech.attendanceservice.PREFERENCE_FILE_KEY</string>
+    <string name="order_count_preference">com.crowncomptech.attendanceservice.ORDER_COUNT_PREFERENCE</string>
+
+</resources>

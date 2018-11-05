@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    android:fadingEdgeLength="10dp">
+
+    <LinearLayout
+        android:id="@+id/productContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewProductThumb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/textViewNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:paddingBottom="@dimen/margin_4"
+                android:paddingEnd="@dimen/margin_8"
+                android:paddingStart="@dimen/margin_8"
+                android:paddingTop="@dimen/margin_4"
+                android:text="New"
+                android:textColor="@android:color/white"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/textViewProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_marginRight="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="SAMSUNG"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+
+
+            <TextView
+                android:id="@+id/textViewProductCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_marginStart="@dimen/margin_8"
+                android:text="REFRIGERATOR"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/textViewProductAvailableCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_marginStart="@dimen/margin_8"
+                android:text="Available: 3"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/textViewProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_marginRight="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8"
+
+            android:text="Tk 1500"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginRight="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewProductPreviousPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tk 2500"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/textViewProductDiscountPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_4"
+                android:text="-39%"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginRight="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewProductRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(7/10)"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/textViewProductReviewUsers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_4"
+                android:text="(7)"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
